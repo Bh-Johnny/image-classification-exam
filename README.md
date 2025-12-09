@@ -1,4 +1,4 @@
-# Image Classification Pipeline (Metwant Exam)
+# Image Classification Pipeline
 
 这是一个基于 CLIP 模型的图像分类工程实现，旨在处理存储在 TAR 归档中的大规模图像数据，并利用 Parquet 索引进行高效读取。
 
@@ -37,7 +37,7 @@ uv run src/run.py --tar_path ./data/zip1.tar --batch_size 64
 
 ## 💡 核心思考链路与工程决策 (Design & Thinking Process)
 
-在完成本次 Exam 的过程中，我主要关注以下三个维度的工程实现与优化：
+在完成本次pipeline搭建的过程中，我主要关注以下三个维度的工程实现与优化：
 
 ### 1. 数据 I/O 的高效性 (Data Efficiency)
 *   **问题**：通常图像数据集需要解压后读取，但这会占用大量 inode 和磁盘空间，且小文件读取速度慢。
@@ -77,6 +77,14 @@ uv run src/run.py --tar_path ./data/zip1.tar --batch_size 64
 - `key`: 图像唯一标识
 - `label`: 预测类别
 - `score`: 置信度分数
+
+## 🤖 AI使用声明
+
+本项目在 Google Gemini 3 Pro 的协助下开发完成。人工智能工具被用于以下方面：
+- 生成初始的样板代码。
+- 调试和排查具体错误。
+- 优化文档和注释内容。
+所有代码逻辑和架构设计均经过作者审查与确认，以确保其正确性和可维护性。
 
 ---
 *Author: Johnny Lingsong Wang*
